@@ -1,0 +1,5 @@
+{
+    "secret_store" : "127.0.0.1:8010",
+    "eth_client" : "127.0.0.1:8545",
+    "acl_contract" : "83e9de79853ec65e4e221646d8253f18de38fa71"
+}

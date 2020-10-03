@@ -1,0 +1,5 @@
+// A circuit file that doesn't depend on zokrates standard library functions
+
+def main(private field a) -> (field):
+  a * a == 64
+  return 1

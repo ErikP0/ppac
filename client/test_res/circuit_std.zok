@@ -1,0 +1,7 @@
+// A circuit file that depends on zokrates standard library functions
+
+import "utils/pack/unpack128" as unpack128
+
+def main(private field x) -> (bool[128]):
+    bool[128] h = unpack128(x)
+    return h

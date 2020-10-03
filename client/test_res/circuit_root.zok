@@ -1,0 +1,6 @@
+// circuit file to test proof generation
+
+def main(private field a, private field b, field c) -> (field):
+  a * a == c
+  b == c
+  return 1

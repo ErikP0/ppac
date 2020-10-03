@@ -1,0 +1,4 @@
+# Cargo build directory
+target/
+
+.idea/
