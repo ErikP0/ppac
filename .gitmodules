@@ -1,0 +1,3 @@
+[submodule "openethereum"]
+	path = openethereum
+	url = https://github.com/openethereum/openethereum.git
