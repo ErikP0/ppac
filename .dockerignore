@@ -1,0 +1,5 @@
+.git/
+.idea/
+openethereum/target/
+target/
+*.Dockerfile

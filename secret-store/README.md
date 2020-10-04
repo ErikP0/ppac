@@ -12,11 +12,3 @@ The client has to provide its own implementations of SecretStoreChain, key pair,
 For the reference implementation see the corresponding code in Parity Ethereum client:
 
 https://github.com/paritytech/parity-ethereum/blob/master/parity/secretstore/server.rs
-
-
-# Integration with Openethereum
-- Copy `configuration.rs` to `openethereum/parity/configuration.rs`
-- Copy `server.rs` to `openethereum/parity/secretstore/server.rs`
-- Change Openethereum's `Cargo.toml` such that secret store is build from this repository, e.g.
-`parity-secretstore = { path = <path to this repository>,  optional = true }`
-- Compile with secretstore enabled `cargo build --features "secretstore"`

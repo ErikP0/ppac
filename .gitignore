@@ -1,4 +1,5 @@
 # Cargo build directory
 target/
+openethereum/target/
 
 .idea/
