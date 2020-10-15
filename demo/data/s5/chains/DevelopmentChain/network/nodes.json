@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "url": "enode://a00d34a7e2ba4fc226cdd93f99bbfbb2fb9dc2260993e25701025edd3e2b74f879bd638a4e71788b489941c3f7f76ca1a7e8a1d8f818764f0cf2202f4a28994e@10.0.0.11:30303",
+      "last_contact": {
+        "success": 1602791542
+      }
+    },
+    {
+      "url": "enode://8ed8766ca6575984f8d4031f50a6eaeaedf12f01e298d78bf53a23765ad35881fdd572a39ef957f046fb33c727d5742a7947ec957f60cbc4678afbe814ab900e@10.0.0.12:30304",
+      "last_contact": {
+        "success": 1602791541
+      }
+    },
+    {
+      "url": "enode://d46d73e450b7a266cd70d16bf58f8e53003eb4874fa565d36a9b364d218ae4f29acf0380c87a569e19aa1d942e8c827c27a8cee1095f04c7cd179c703103af32@10.0.0.21:30303",
+      "last_contact": {
+        "success": 1602791541
+      }
+    },
+    {
+      "url": "enode://0b24c2bbba226902f7cd6bf52a2bcbeca8d59e61f18bfab2ad67c02a1fa708583f62404d66ef4df5b88acbde361c400eea6d08fb05b9bc6a01704af58ad6ca6b@10.0.0.13:30305",
+      "last_contact": {
+        "success": 1602791541
+      }
+    },
+    {
+      "url": "enode://085ccf926eee975d2554eb7633d64958c49afc00599869d1f17800ed8b3288acbe53db53b77a0bbef37b4764ca7bb7ccec9196d41d2ec85d07c9bc373cc4e2d2@10.0.0.20:30303",
+      "last_contact": {
+        "success": 1602791541
+      }
+    },
+    {
+      "url": "enode://a59274894d3a37418ad1fca4f4b94c879a5ba7db05928fd0b80cd9cca17c7422f0e93782333a30ac2cd5cfd43f8bb4f45a07b2e9b45ce8a04d3dd67b6471bead@10.0.0.10:30303",
+      "last_contact": {
+        "success": 1602791540
+      }
+    },
+    {
+      "url": "enode://f3480ddd319ebf0817f911f028023dd5c9d1aa0b3d1363f80bc1adc233c1e0d2e8afdf200272f2b986266ec76fdca580f61d3cbdfcb41e4be8b1d1eee2e4ba36@10.0.0.20:30303",
+      "last_contact": {
+        "failure": 1602791839
+      }
+    },
+    {
+      "url": "enode://efe6c1d2f8bae0045b32e392a9be3fc4a06ee949ab199c6f47458ec3965d949295c2eef32a0d882c21aaf800a93628b4bc310d47f9cbfc4b31a9873062c03f2d@10.0.0.21:30303",
+      "last_contact": {
+        "failure": 1602791839
+      }
+    }
+  ]
+}

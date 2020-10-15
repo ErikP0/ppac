@@ -1,0 +1,132 @@
+version: '3'
+services:
+    chain1:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: chain1
+        hostname: chain1
+        command: ./secretstore -c config/config.toml
+        expose:
+            - "8545" # json rpc
+            - "30303" # ethereum chain network
+        ports:
+            - "8545"
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.20
+        volumes:
+            - ./chain1:/usr/app/config
+            - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
+            - ${PWD}/chain1/god.pwd:/usr/app/account.pwd
+            - ./data/chain1:/usr/app/chain1
+    chain2:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: chain2
+        hostname: chain2
+        command: ./secretstore -c config/config.toml
+        expose:
+            - "30303" # ethereum chain network
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.21
+        volumes:
+            - ./chain2:/usr/app/config
+            - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
+            - ./data/chain2:/usr/app/chain2
+    s1:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: s1
+        hostname: s1
+        command: ./secretstore -c config/config.toml
+        expose:
+            - "8545" #json rpc
+            - "30303" # ethereum chain network
+            - "8010" # secret store http api
+            - "8040" # secret store network
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.10
+        volumes:
+            - ./s1:/usr/app/config
+            - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
+            - ./data/s1:/usr/app/s1
+    s2:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: s2
+        hostname: s2
+        command: ./secretstore -c config/config.toml
+        expose:
+            - "8545" #json rpc
+            - "30303" # ethereum chain network
+            - "8010" # secret store http api
+            - "8040" # secret store network
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.11
+        volumes:
+            - ./s2:/usr/app/config
+            - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
+            - ./data/s2:/usr/app/s2
+    s3:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: s3
+        hostname: s3
+        command: ./secretstore -c config/config.toml
+        expose:
+            - "8545" #json rpc
+            - "30303" # ethereum chain network
+            - "8010" # secret store http api
+            - "8040" # secret store network
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.12
+        volumes:
+            - ./s3:/usr/app/config
+            - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
+            - ./data/s3:/usr/app/s3
+    s4:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: s4
+        hostname: s4
+        command: ./secretstore -c config/config.toml
+        expose:
+            - "8545" #json rpc
+            - "30303" # ethereum chain network
+            - "8010" # secret store http api
+            - "8040" # secret store network
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.13
+        volumes:
+            - ./s4:/usr/app/config
+            - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
+            - ./data/s4:/usr/app/s4
+    s5:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: s5
+        hostname: s5
+        command: ./secretstore -c config/config.toml
+        expose:
+            - "8545" #json rpc
+            - "30303" # ethereum chain network
+            - "8010" # secret store http api
+            - "8040" # secret store network
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.14
+        volumes:
+            - ./s5:/usr/app/config
+            - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
+            - ./data/s5:/usr/app/s5
+    alice:
+        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        container_name: alice
+        hostname: alice
+        command: sleep inf
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.30
+networks:
+    ppac-net:
+        ipam:
+            config:
+                - subnet: 10.0.0.1/24
