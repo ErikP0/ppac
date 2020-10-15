@@ -43,7 +43,7 @@ bootnodes = [
 [secretstore]
 self_secret = "5235dfbb4b0fc48c1eb7f17c74bb1d63785fe2e7"
 disable_http = true
-acl_contract = "none"
+acl_contract = "6ab58b97a66CE2587D6fFDE1Bc72B78745FF8960"
 server_set_contract = "none"
 interface  = "all"
 port = 8010

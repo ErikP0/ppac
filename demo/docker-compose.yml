@@ -9,7 +9,7 @@ services:
             - "8545" # json rpc
             - "30303" # ethereum chain network
         ports:
-            - "8545"
+            - "8545:8545"
         networks:
             ppac-net:
                 ipv4_address: 10.0.0.20

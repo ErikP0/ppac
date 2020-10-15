@@ -45,4 +45,4 @@ bootnodes = [
 disable = true
 
 [account]
-password = ["account.pwd"]
+password = ["config/account.pwd"]
