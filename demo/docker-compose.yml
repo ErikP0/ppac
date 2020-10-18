@@ -8,8 +8,6 @@ services:
         expose:
             - "8545" # json rpc
             - "30303" # ethereum chain network
-        ports:
-            - "8545:8545"
         networks:
             ppac-net:
                 ipv4_address: 10.0.0.20
@@ -118,13 +116,25 @@ services:
             - ${PWD}/dev-chainspec.json:/usr/app/dev-chainspec.json
             - ./data/s5:/usr/app/s5
     alice:
-        image: docker.pkg.github.com/erikp0/ppac/secretstore:latest
+        image: docker.pkg.github.com/erikp0/ppac/client:latest
         container_name: alice
         hostname: alice
         command: sleep inf
         networks:
             ppac-net:
                 ipv4_address: 10.0.0.30
+        volumes:
+            - ./share:/usr/app/share
+    bob:
+        image: docker.pkg.github.com/erikp0/ppac/client:latest
+        container_name: bob
+        hostname: bob
+        command: sleep inf
+        networks:
+            ppac-net:
+                ipv4_address: 10.0.0.31
+        volumes:
+            - ./share:/usr/app/share
 networks:
     ppac-net:
         ipam:

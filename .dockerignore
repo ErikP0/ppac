@@ -3,3 +3,4 @@
 openethereum/target/
 target/
 *.Dockerfile
+demo/

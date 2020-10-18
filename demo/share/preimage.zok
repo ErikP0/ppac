@@ -1,0 +1,5 @@
+import "hashes/sha256/512bitPacked" as sha256packed
+
+def main(private field[4] preimage, field[2] hash) -> (field):
+    hash == sha256packed(preimage)
+    return 1
